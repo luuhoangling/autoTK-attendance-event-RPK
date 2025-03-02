@@ -1,0 +1,80 @@
+ID 204 đã điểm danh ngày 2025-03-01
+ID 205 đã điểm danh ngày 2025-03-01
+ID 206 đã điểm danh ngày 2025-03-01
+ID 207 đã điểm danh ngày 2025-03-01
+ID 208 đã điểm danh ngày 2025-03-01
+
+ID 209 đã điểm danh ngày 2025-03-01
+ID 212 đã điểm danh ngày 2025-03-01
+
+ID 213 đã điểm danh ngày 2025-03-01
+ID 214 đã điểm danh ngày 2025-03-01
+Lỗi trong quá trình thực thi ID 215: 'Game' object has no attribute 'account_field'
+Lỗi trong quá trình thực thi ID 215: 'Game' object has no attribute 'account_field'
+ID 215 đã điểm danh ngày 2025-03-01
+217 218 216 
+
+ID 219 đã điểm danh ngày 2025-03-01
+ID 220 đã điểm danh ngày 2025-03-01
+ID 221 đã điểm danh ngày 2025-03-01
+ID 222 đã điểm danh ngày 2025-03-01
+
+
+ID 223 đã điểm danh ngày 2025-03-01
+ID 55 đã điểm danh ngày 2025-03-01
+
+ID 56 đã điểm danh ngày 2025-03-01
+ID 57 đã điểm danh ngày 2025-03-01
+ID 58 đã điểm danh ngày 2025-03-01
+ID 59 đã điểm danh ngày 2025-03-01
+ID 60 đã điểm danh ngày 2025-03-01
+ID 61 đã điểm danh ngày 2025-03-01
+ID 62: TK MK không chính xác
+ID 63 đã điểm danh ngày 2025-03-01
+ID 64 đã điểm danh ngày 2025-03-01
+ID 65 đã điểm danh ngày 2025-03-01
+ID 66: TK MK không chính xác
+ID 67: TK MK không chính xác
+ID 68 đã điểm danh ngày 2025-03-01
+ID 69: TK MK không chính xác
+ID 70 đã điểm danh ngày 2025-03-01
+ID 71 đã điểm danh ngày 2025-03-01
+ID 72: Mất kết nối khi vào sảnh
+ID 73 đã điểm danh ngày 2025-03-01
+ID 74: Mất kết nối khi vào sảnh
+ID 75: Mất kết nối khi vào sảnh
+ID 76 đã điểm danh ngày 2025-03-01
+ID 77: TK MK không chính xác
+
+ID 77: TK MK không chính xác
+ID 77: TK MK không chính xác
+ID 78 đã điểm danh ngày 2025-03-01
+ID 79 đã điểm danh ngày 2025-03-01
+ID 80 đã điểm danh ngày 2025-03-01
+ID 81 đã điểm danh ngày 2025-03-01
+ID 82 đã điểm danh ngày 2025-03-01
+ID 83 đã điểm danh ngày 2025-03-01
+ID 84: Mất kết nối khi vào sảnh
+ID 85 đã điểm danh ngày 2025-03-01
+ID 86 đã điểm danh ngày 2025-03-01
+ID 87: Mất kết nối khi vào sảnh
+ID 88: Mất kết nối khi vào sảnh
+ID 89: Mất kết nối khi vào sảnh
+ID 90: Mất kết nối khi vào sảnh
+ID 91: Mất kết nối khi vào sảnh
+ID 92 đã điểm danh ngày 2025-03-01
+ID 93 đã điểm danh ngày 2025-03-01
+ID 94 đã điểm danh ngày 2025-03-01
+ID 95: Mất kết nối khi vào sảnh
+ID 96: Mất kết nối khi vào sảnh
+ID 97: Mất kết nối khi vào sảnh
+ID 98: Mất kết nối khi vào sảnh
+ID 99: Mất kết nối khi vào sảnh
+ID 100: TK MK không chính xác
+ID 100: Tài khoản, mật khẩu không chính xác
+ID 101: Tài khoản, mật khẩu không chính xác
+ID 102: Lỗi khi vào sự kiện
+ID 103: Lỗi khi vào sự kiện
+ID 104: Lỗi khi vào sự kiện
+Lỗi trong quá trình thực thi ID 104: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED.
+ID 105 đã điểm danh ngày 2025-03-01
