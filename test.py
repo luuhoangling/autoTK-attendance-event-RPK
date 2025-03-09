@@ -60,7 +60,7 @@ truyKich = pywinauto.Application()
 
 
 def logToFile(message):
-    with open(f"C:/Users/Acer/Downloads/Python/tk/check_attendance/checking_attendance_{current_date}.txt", "a", encoding="utf-8") as f:
+    with open(f"C:/Users/Acer/Downloads/Python/tk/check_attendance/checking_attendance_{current_date}_2.txt", "a", encoding="utf-8") as f:
         f.write(message + "\n")
 
 # =================================================================
@@ -87,17 +87,16 @@ def runGame():
     truyKich.start("D:\\TK\\TruyKich\\WDlauncher.exe")
 
 
-def writeAccount(id):
-    account = 'regs' + str(id)
+def writeAccount(account_obj):
+    # Nhập thông tin đăng nhập từ đối tượng account_obj
     pyautogui.moveTo(*game.account_field)
     time.sleep(0.5)
     pyautogui.click()
-    pyautogui.typewrite(account)
+    pyautogui.typewrite(account_obj["acc"])
     pyautogui.moveTo(*game.password_field)
     time.sleep(0.5)
     pyautogui.click()
-    password = 'takitorj'
-    pyautogui.typewrite(password)
+    pyautogui.typewrite(account_obj["pass"])
     pyautogui.press('enter')
 
 
@@ -148,34 +147,38 @@ def reSelectServerNorth():
     pyautogui.moveTo(*game.server_north)
     time.sleep(0.5)
     pyautogui.click()
+
 # =================================================================
-# Hàm main thực hiện quy trình cho từng ID
+# Hàm main thực hiện quy trình cho từng tài khoản
 # =================================================================
 
 
-def main(id):
+def main(account_obj):
     try:
         runGame()
 
         # Kiểm tra hiện màn hình login và điền tài khoản mật khẩu
         if not waitForImage(IMAGE_PATHS['login_screen'], timeout=30):
-            logToFile(f"ID {id}: Không mở được màn hình login")
+            logToFile(
+                f"Tài khoản {account_obj['acc']}: Không mở được màn hình login")
             closeLogin()
-            return  # Thoát hàm main để chuyển sang ID tiếp theo
-        writeAccount(id)
+            return
+        writeAccount(account_obj)
 
         # Kiểm tra hiện khung chọn server và chọn server Bắc
         if not waitForImage(IMAGE_PATHS['server_north'], timeout=10):
-            logToFile(f"ID {id}: Tài khoản, mật khẩu không chính xác")
+            logToFile(
+                f"Tài khoản {account_obj['acc']}: Tài khoản, mật khẩu không chính xác")
             closeLogin()
             return
         selectServerNorth()
 
-        # Kiểm tra vào sảnh, nếu sau 60s không hiện khung map cổ thì chọn lại server và quét tiếp
+        # Kiểm tra vào sảnh, nếu sau 60s không hiện khung map thì chọn lại server và quét tiếp
         if not waitForImage(IMAGE_PATHS['x_button'], timeout=60):
             reSelectServerNorth()
             if not waitForImage(IMAGE_PATHS['x_button'], timeout=60):
-                logToFile(f"ID {id}: Không vào được game")
+                logToFile(
+                    f"Tài khoản {account_obj['acc']}: Không vào được game")
                 return
 
         loop_start_time = time.time()
@@ -188,84 +191,131 @@ def main(id):
         b7_done = False
 
         while not b7_done:
-            # Kiểm tra thời gian đã trôi qua trong vòng lặp phụ
             if time.time() - loop_start_time > 60:
-                logToFile(f"ID {id}: Lỗi check sự kiện")
+                logToFile(f"Tài khoản {account_obj['acc']}: Lỗi check sự kiện")
                 closeTruyKich()
                 return
 
-            # B1: Kiểm tra cửa sổ giới thiệu map (review_map) và click nút "X"
             if not b1_done:
                 if pyautogui.locateOnScreen(IMAGE_PATHS['review_map'], confidence=0.8):
                     click(game.x_review_btn)
                     b1_done = True
 
-            # B2: Kiểm tra nút X và thực hiện click nút X
             if not b2_done:
                 if pyautogui.locateOnScreen(IMAGE_PATHS['x_button'], confidence=0.8):
                     click(game.x_event_btn)
                     b2_done = True
 
-            # B3: Kiểm tra và click nút Xác nhận
             if not b3_done:
                 if pyautogui.locateOnScreen(IMAGE_PATHS['confirm_button'], confidence=0.8):
                     click(game.confirm_btn)
                     b3_done = True
 
-            # B4: Kiểm tra và click nút OK
             if not b4_done:
                 if pyautogui.locateOnScreen(IMAGE_PATHS['ok_button'], confidence=0.8):
                     click(game.ok_btn)
                     b4_done = True
 
-            # B5: Kiểm tra nút đóng khung sự kiện và cuộn trang
             if not b5_done:
                 if pyautogui.locateOnScreen(IMAGE_PATHS['event_button'], confidence=0.8):
                     moveAndScroll(game.event_nav, 300,
                                   IMAGE_PATHS['rpk_button'])
                     b5_done = True
 
-            # B6: Kiểm tra nút sự kiện rpk và click vào trung tâm nút
             if not b6_done:
                 location = pyautogui.locateOnScreen(
                     IMAGE_PATHS['rpk_button'], confidence=0.8)
                 if location:
                     click((location.left + location.width // 2,
-                           location.top + location.height // 2))
+                          location.top + location.height // 2))
                     b6_done = True
 
-            # B7: Sau khi B6 hoàn thành, thực hiện điểm danh rpk
             if b6_done and not b7_done:
                 time.sleep(1)
                 click(game.attendance_btn)
                 click(game.attendance_btn)
                 b7_done = True
 
-            time.sleep(0.5)  # Giảm tải CPU trong vòng lặp
+            time.sleep(0.5)
 
-        # Đóng game
         time.sleep(2)
         closeTruyKich()
-
-        # Ghi log
-        logToFile(f"ID {id} đã điểm danh ngày {current_date}")
+        logToFile(
+            f"Tài khoản {account_obj['acc']} đã điểm danh ngày {current_date}")
 
     except Exception as e:
-        logToFile(f"Lỗi trong quá trình thực thi ID {id}: {e}")
+        logToFile(
+            f"Lỗi trong quá trình thực thi tài khoản {account_obj['acc']}: {e}")
         closeTruyKich()
 
 
 # =================================================================
+# Danh sách các tài khoản cần đăng nhập
+# Mỗi phần tử là một đối tượng có 2 key: acc và pass
+# =================================================================
+ACCOUNTS = [
+    {"acc": "role2018", "pass": "takitorj"},
+    {"acc": "role2029", "pass": "takitorj"},
+    {"acc": "role20166", "pass": "takitorj@f"},
+
+    {"acc": "role1",     "pass": "takitorj1"},
+    {"acc": "role5",     "pass": "takitorj1"},
+
+    {"acc": "regs8",      "pass": "takitorj"},
+]
+
+# Chứa các acc bị lỗi chạy lúc 12h
+id_ngoai_le = [
+    {"acc": "regs70", "pass": "takitorj"},
+    {"acc": "regs184", "pass": "takitorj"},
+    {"acc": "regs185", "pass": "takitorj"},
+    {"acc": "regs193", "pass": "takitorj"},
+    {"acc": "regs207", "pass": "takitorj"},
+    {"acc": "regs208", "pass": "takitorj"},
+    {"acc": "regs209", "pass": "takitorj"},
+    {"acc": "regs212", "pass": "takitorj"},
+    {"acc": "regs213", "pass": "takitorj"},
+    {"acc": "regs214", "pass": "takitorj"},
+    {"acc": "regs215", "pass": "takitorj"},
+    {"acc": "regs216", "pass": "takitorj"},
+    {"acc": "regs217", "pass": "takitorj"},
+    {"acc": "regs218", "pass": "takitorj"},
+    {"acc": "regs219", "pass": "takitorj"},
+    {"acc": "regs220", "pass": "takitorj"},
+    {"acc": "regs221", "pass": "takitorj"},
+    {"acc": "regs222", "pass": "takitorj"},
+    {"acc": "regs223", "pass": "takitorj"},
+    {"acc": "regs224", "pass": "takitorj"},
+    {"acc": "regs225", "pass": "takitorj"},
+    {"acc": "regs226", "pass": "takitorj"},
+    {"acc": "regs227", "pass": "takitorj"},
+    {"acc": "regs228", "pass": "takitorj"},
+    {"acc": "regs229", "pass": "takitorj"},
+    {"acc": "regs230", "pass": "takitorj"},
+    {"acc": "regs231", "pass": "takitorj"},
+    {"acc": "regs232", "pass": "takitorj"},
+    {"acc": "regs233", "pass": "takitorj"},
+    {"acc": "regs234", "pass": "takitorj"},
+    {"acc": "regs235", "pass": "takitorj"},
+    {"acc": "regs236", "pass": "takitorj"},
+    {"acc": "regs237", "pass": "takitorj"},
+    {"acc": "regs238", "pass": "takitorj"},
+    {"acc": "regs239", "pass": "takitorj"},
+    {"acc": "regs240", "pass": "takitorj"},
+    {"acc": "regs241", "pass": "takitorj"},
+    {"acc": "regs242", "pass": "takitorj"},
+    {"acc": "regs243", "pass": "takitorj"},
+    {"acc": "regs244", "pass": "takitorj"},
+    {"acc": "regs245", "pass": "takitorj"}
+]
+
+# =================================================================
+# Vòng lặp chạy qua danh sách tài khoản
+# =================================================================
 if __name__ == '__main__':
-    # Danh sách các id cần bỏ qua điểm danh
-    SKIP_IDS = [62, 66, 69, 77, 100, 134, 135]
-    id = 4
-    max_id = 4
-    while id <= max_id:
-        if id in SKIP_IDS:
-            logToFile(f"ID {id} bị bỏ qua điểm danh")
-            id += 1
-            continue
+    for account in ACCOUNTS:
         time.sleep(5)
-        main(id)
-        id += 1
+        main(account)
+    for account in id_ngoai_le:
+        time.sleep(5)
+        main(account)

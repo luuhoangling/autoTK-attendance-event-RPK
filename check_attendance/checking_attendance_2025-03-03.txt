@@ -1,0 +1,324 @@
+ID 55 đã điểm danh ngày 2025-03-03
+ID 56 đã điểm danh ngày 2025-03-03
+ID 57: Lỗi check sự kiện
+ID 58 đã điểm danh ngày 2025-03-03
+ID 59: Tài khoản, mật khẩu không chính xác
+ID 60: Tài khoản, mật khẩu không chính xác
+ID 61: Tài khoản, mật khẩu không chính xác
+ID 62 bị bỏ qua điểm danh
+ID 63: Tài khoản, mật khẩu không chính xác
+ID 64: Tài khoản, mật khẩu không chính xác
+ID 65 đã điểm danh ngày 2025-03-03
+ID 66 bị bỏ qua điểm danh
+ID 67 đã điểm danh ngày 2025-03-03
+ID 68: Tài khoản, mật khẩu không chính xác
+ID 69 bị bỏ qua điểm danh
+ID 70: Tài khoản, mật khẩu không chính xác
+ID 71: Tài khoản, mật khẩu không chính xác
+ID 72: Tài khoản, mật khẩu không chính xác
+ID 73: Tài khoản, mật khẩu không chính xác
+ID 74: Tài khoản, mật khẩu không chính xác
+ID 75: Tài khoản, mật khẩu không chính xác
+ID 76: Tài khoản, mật khẩu không chính xác
+ID 77 bị bỏ qua điểm danh
+ID 78: Tài khoản, mật khẩu không chính xác
+ID 79: Tài khoản, mật khẩu không chính xác
+ID 80: Tài khoản, mật khẩu không chính xác
+ID 81: Tài khoản, mật khẩu không chính xác
+ID 82: Tài khoản, mật khẩu không chính xác
+ID 83: Tài khoản, mật khẩu không chính xác
+ID 84: Tài khoản, mật khẩu không chính xác
+ID 85: Tài khoản, mật khẩu không chính xác
+ID 86: Tài khoản, mật khẩu không chính xác
+ID 87: Tài khoản, mật khẩu không chính xác
+ID 88: Tài khoản, mật khẩu không chính xác
+ID 89: Tài khoản, mật khẩu không chính xác
+ID 90: Tài khoản, mật khẩu không chính xác
+ID 91: Tài khoản, mật khẩu không chính xác
+ID 92: Tài khoản, mật khẩu không chính xác
+ID 93: Tài khoản, mật khẩu không chính xác
+ID 94: Tài khoản, mật khẩu không chính xác
+ID 95: Tài khoản, mật khẩu không chính xác
+ID 96: Tài khoản, mật khẩu không chính xác
+ID 97: Tài khoản, mật khẩu không chính xác
+ID 98: Tài khoản, mật khẩu không chính xác
+ID 99 đã điểm danh ngày 2025-03-03
+ID 100 bị bỏ qua điểm danh
+ID 101: Tài khoản, mật khẩu không chính xác
+ID 102 đã điểm danh ngày 2025-03-03
+ID 103 đã điểm danh ngày 2025-03-03
+ID 104 đã điểm danh ngày 2025-03-03
+ID 105: Lỗi check sự kiện
+ID 106 đã điểm danh ngày 2025-03-03
+ID 107 đã điểm danh ngày 2025-03-03
+ID 108 đã điểm danh ngày 2025-03-03
+ID 109: Lỗi check sự kiện
+ID 110 đã điểm danh ngày 2025-03-03
+ID 111: Tài khoản, mật khẩu không chính xác
+ID 112: Lỗi check sự kiện
+ID 113: Lỗi check sự kiện
+ID 114 đã điểm danh ngày 2025-03-03
+ID 115 đã điểm danh ngày 2025-03-03
+ID 116 đã điểm danh ngày 2025-03-03
+ID 117 đã điểm danh ngày 2025-03-03
+ID 118 đã điểm danh ngày 2025-03-03
+ID 119 đã điểm danh ngày 2025-03-03
+ID 120 đã điểm danh ngày 2025-03-03
+ID 121 đã điểm danh ngày 2025-03-03
+ID 122 đã điểm danh ngày 2025-03-03
+ID 123 đã điểm danh ngày 2025-03-03
+ID 124 đã điểm danh ngày 2025-03-03
+ID 125 đã điểm danh ngày 2025-03-03
+ID 126 đã điểm danh ngày 2025-03-03
+ID 127 đã điểm danh ngày 2025-03-03
+ID 128: Lỗi check sự kiện
+ID 129 đã điểm danh ngày 2025-03-03
+ID 130 đã điểm danh ngày 2025-03-03
+ID 131 đã điểm danh ngày 2025-03-03
+ID 132 đã điểm danh ngày 2025-03-03
+ID 133 đã điểm danh ngày 2025-03-03
+ID 134 bị bỏ qua điểm danh
+ID 135 bị bỏ qua điểm danh
+ID 136: Không mở được màn hình login
+ID 137 đã điểm danh ngày 2025-03-03
+ID 138 đã điểm danh ngày 2025-03-03
+ID 139 đã điểm danh ngày 2025-03-03
+ID 140: Lỗi check sự kiện
+ID 141 đã điểm danh ngày 2025-03-03
+ID 142 đã điểm danh ngày 2025-03-03
+ID 143 đã điểm danh ngày 2025-03-03
+ID 144 đã điểm danh ngày 2025-03-03
+ID 145 đã điểm danh ngày 2025-03-03
+Lỗi trong quá trình thực thi ID 146: screen grab failed
+ID 147 đã điểm danh ngày 2025-03-03
+ID 148 đã điểm danh ngày 2025-03-03
+ID 149 đã điểm danh ngày 2025-03-03
+ID 150: Lỗi check sự kiện
+ID 151 đã điểm danh ngày 2025-03-03
+ID 152 đã điểm danh ngày 2025-03-03
+ID 153 đã điểm danh ngày 2025-03-03
+ID 154 đã điểm danh ngày 2025-03-03
+ID 155 đã điểm danh ngày 2025-03-03
+ID 156 đã điểm danh ngày 2025-03-03
+ID 157 đã điểm danh ngày 2025-03-03
+ID 158 đã điểm danh ngày 2025-03-03
+ID 159 đã điểm danh ngày 2025-03-03
+ID 160 đã điểm danh ngày 2025-03-03
+ID 161 đã điểm danh ngày 2025-03-03
+ID 162 đã điểm danh ngày 2025-03-03
+ID 163 đã điểm danh ngày 2025-03-03
+ID 164 đã điểm danh ngày 2025-03-03
+ID 165 đã điểm danh ngày 2025-03-03
+ID 166 đã điểm danh ngày 2025-03-03
+ID 167: Không mở được màn hình login
+ID 168: Không mở được màn hình login
+ID 169: Không mở được màn hình login
+ID 170: Không mở được màn hình login
+ID 171: Không mở được màn hình login
+ID 172: Không mở được màn hình login
+ID 173: Không mở được màn hình login
+ID 174: Không mở được màn hình login
+ID 175: Không mở được màn hình login
+ID 176: Không mở được màn hình login
+Lỗi trong quá trình thực thi ID 177: PyAutoGUI fail-safe triggered from mouse moving to a corner of the screen. To disable this fail-safe, set pyautogui.FAILSAFE to False. DISABLING FAIL-SAFE IS NOT RECOMMENDED.
+ID 55 bị bỏ qua điểm danh
+ID 56 bị bỏ qua điểm danh
+ID 57 đã điểm danh ngày 2025-03-03
+ID 58 bị bỏ qua điểm danh
+ID 59 đã điểm danh ngày 2025-03-03
+ID 60 đã điểm danh ngày 2025-03-03
+ID 61 đã điểm danh ngày 2025-03-03
+ID 62 bị bỏ qua điểm danh
+ID 63 đã điểm danh ngày 2025-03-03
+ID 64 đã điểm danh ngày 2025-03-03
+ID 65 bị bỏ qua điểm danh
+ID 66 bị bỏ qua điểm danh
+ID 67 bị bỏ qua điểm danh
+ID 68 đã điểm danh ngày 2025-03-03
+ID 69 bị bỏ qua điểm danh
+ID 70 đã điểm danh ngày 2025-03-03
+ID 71 đã điểm danh ngày 2025-03-03
+ID 72 đã điểm danh ngày 2025-03-03
+ID 73 đã điểm danh ngày 2025-03-03
+ID 74 đã điểm danh ngày 2025-03-03
+ID 75 đã điểm danh ngày 2025-03-03
+ID 76 đã điểm danh ngày 2025-03-03
+ID 77 bị bỏ qua điểm danh
+ID 78 đã điểm danh ngày 2025-03-03
+ID 79 đã điểm danh ngày 2025-03-03
+ID 80 đã điểm danh ngày 2025-03-03
+ID 81 đã điểm danh ngày 2025-03-03
+ID 82 đã điểm danh ngày 2025-03-03
+ID 83 đã điểm danh ngày 2025-03-03
+ID 84 đã điểm danh ngày 2025-03-03
+ID 85: Lỗi check sự kiện
+ID 86 đã điểm danh ngày 2025-03-03
+ID 87 đã điểm danh ngày 2025-03-03
+ID 88 đã điểm danh ngày 2025-03-03
+ID 89 đã điểm danh ngày 2025-03-03
+ID 90 đã điểm danh ngày 2025-03-03
+ID 91 đã điểm danh ngày 2025-03-03
+ID 92 đã điểm danh ngày 2025-03-03
+ID 93 đã điểm danh ngày 2025-03-03
+ID 94 đã điểm danh ngày 2025-03-03
+ID 95 đã điểm danh ngày 2025-03-03
+ID 96 đã điểm danh ngày 2025-03-03
+ID 97 đã điểm danh ngày 2025-03-03
+ID 98 đã điểm danh ngày 2025-03-03
+ID 99 bị bỏ qua điểm danh
+ID 100 bị bỏ qua điểm danh
+ID 101: Tài khoản, mật khẩu không chính xác
+ID 102 bị bỏ qua điểm danh
+ID 103 bị bỏ qua điểm danh
+ID 104 bị bỏ qua điểm danh
+ID 105 đã điểm danh ngày 2025-03-03
+ID 106 bị bỏ qua điểm danh
+ID 107 bị bỏ qua điểm danh
+ID 108 bị bỏ qua điểm danh
+ID 109 đã điểm danh ngày 2025-03-03
+ID 110 bị bỏ qua điểm danh
+ID 111 đã điểm danh ngày 2025-03-03
+ID 112 đã điểm danh ngày 2025-03-03
+ID 113 đã điểm danh ngày 2025-03-03
+ID 114 bị bỏ qua điểm danh
+ID 115 bị bỏ qua điểm danh
+ID 116 bị bỏ qua điểm danh
+ID 117 bị bỏ qua điểm danh
+ID 118 bị bỏ qua điểm danh
+ID 119 bị bỏ qua điểm danh
+ID 120 bị bỏ qua điểm danh
+ID 121 bị bỏ qua điểm danh
+ID 122 bị bỏ qua điểm danh
+ID 123 bị bỏ qua điểm danh
+ID 124 bị bỏ qua điểm danh
+ID 125 bị bỏ qua điểm danh
+ID 126 bị bỏ qua điểm danh
+ID 127 bị bỏ qua điểm danh
+ID 128 đã điểm danh ngày 2025-03-03
+ID 129 bị bỏ qua điểm danh
+ID 130 bị bỏ qua điểm danh
+ID 131 bị bỏ qua điểm danh
+ID 132 bị bỏ qua điểm danh
+ID 133 bị bỏ qua điểm danh
+ID 134 bị bỏ qua điểm danh
+ID 135 bị bỏ qua điểm danh
+ID 136 đã điểm danh ngày 2025-03-03
+ID 137 bị bỏ qua điểm danh
+ID 138 bị bỏ qua điểm danh
+ID 139 bị bỏ qua điểm danh
+ID 140 đã điểm danh ngày 2025-03-03
+ID 141 bị bỏ qua điểm danh
+ID 142 bị bỏ qua điểm danh
+ID 143 bị bỏ qua điểm danh
+ID 144 bị bỏ qua điểm danh
+ID 145 bị bỏ qua điểm danh
+ID 146 đã điểm danh ngày 2025-03-03
+ID 147 bị bỏ qua điểm danh
+ID 148 bị bỏ qua điểm danh
+ID 149 bị bỏ qua điểm danh
+ID 150 đã điểm danh ngày 2025-03-03
+ID 151 bị bỏ qua điểm danh
+ID 152 bị bỏ qua điểm danh
+ID 153 bị bỏ qua điểm danh
+ID 154 bị bỏ qua điểm danh
+ID 155 bị bỏ qua điểm danh
+ID 156 bị bỏ qua điểm danh
+ID 157 bị bỏ qua điểm danh
+ID 158 bị bỏ qua điểm danh
+ID 159 bị bỏ qua điểm danh
+ID 160 bị bỏ qua điểm danh
+ID 161 bị bỏ qua điểm danh
+ID 162 bị bỏ qua điểm danh
+ID 163 bị bỏ qua điểm danh
+ID 164 bị bỏ qua điểm danh
+ID 165 bị bỏ qua điểm danh
+ID 166 bị bỏ qua điểm danh
+ID 167 đã điểm danh ngày 2025-03-03
+ID 168 đã điểm danh ngày 2025-03-03
+ID 169 đã điểm danh ngày 2025-03-03
+ID 170 đã điểm danh ngày 2025-03-03
+ID 171 đã điểm danh ngày 2025-03-03
+ID 172 đã điểm danh ngày 2025-03-03
+ID 173 đã điểm danh ngày 2025-03-03
+ID 174 đã điểm danh ngày 2025-03-03
+ID 175 đã điểm danh ngày 2025-03-03
+ID 176 đã điểm danh ngày 2025-03-03
+ID 177 đã điểm danh ngày 2025-03-03
+ID 178 đã điểm danh ngày 2025-03-03
+ID 179 đã điểm danh ngày 2025-03-03
+ID 180 đã điểm danh ngày 2025-03-03
+ID 181 đã điểm danh ngày 2025-03-03
+ID 182 đã điểm danh ngày 2025-03-03
+ID 183 đã điểm danh ngày 2025-03-03
+ID 184 đã điểm danh ngày 2025-03-03
+ID 185 đã điểm danh ngày 2025-03-03
+ID 186: Lỗi check sự kiện
+ID 187 đã điểm danh ngày 2025-03-03
+ID 188: Lỗi check sự kiện
+ID 189 đã điểm danh ngày 2025-03-03
+ID 190 đã điểm danh ngày 2025-03-03
+ID 191 đã điểm danh ngày 2025-03-03
+ID 192 đã điểm danh ngày 2025-03-03
+ID 193 đã điểm danh ngày 2025-03-03
+ID 194 đã điểm danh ngày 2025-03-03
+ID 195 đã điểm danh ngày 2025-03-03
+ID 196 đã điểm danh ngày 2025-03-03
+ID 197 đã điểm danh ngày 2025-03-03
+ID 198 đã điểm danh ngày 2025-03-03
+ID 199 đã điểm danh ngày 2025-03-03
+ID 200 đã điểm danh ngày 2025-03-03
+ID 201 đã điểm danh ngày 2025-03-03
+ID 202 đã điểm danh ngày 2025-03-03
+ID 203 đã điểm danh ngày 2025-03-03
+ID 204 đã điểm danh ngày 2025-03-03
+ID 205 đã điểm danh ngày 2025-03-03
+ID 206: Lỗi check sự kiện
+ID 207 đã điểm danh ngày 2025-03-03
+ID 208: Lỗi check sự kiện
+ID 209 đã điểm danh ngày 2025-03-03
+ID 210 bị bỏ qua điểm danh
+ID 211 bị bỏ qua điểm danh
+ID 212 đã điểm danh ngày 2025-03-03
+ID 213: Lỗi check sự kiện
+ID 214 đã điểm danh ngày 2025-03-03
+ID 215 đã điểm danh ngày 2025-03-03
+ID 216 đã điểm danh ngày 2025-03-03
+ID 217 đã điểm danh ngày 2025-03-03
+ID 218 đã điểm danh ngày 2025-03-03
+ID 219 đã điểm danh ngày 2025-03-03
+ID 220 đã điểm danh ngày 2025-03-03
+ID 221 đã điểm danh ngày 2025-03-03
+ID 222 đã điểm danh ngày 2025-03-03
+ID 223 đã điểm danh ngày 2025-03-03
+ID 224 đã điểm danh ngày 2025-03-03
+ID 225 đã điểm danh ngày 2025-03-03
+ID 226 đã điểm danh ngày 2025-03-03
+ID 227 đã điểm danh ngày 2025-03-03
+ID 228 đã điểm danh ngày 2025-03-03
+ID 229 đã điểm danh ngày 2025-03-03
+ID 230 đã điểm danh ngày 2025-03-03
+ID 231 đã điểm danh ngày 2025-03-03
+ID 232 đã điểm danh ngày 2025-03-03
+ID 233 đã điểm danh ngày 2025-03-03
+ID 234 đã điểm danh ngày 2025-03-03
+ID 235 đã điểm danh ngày 2025-03-03
+ID 236 đã điểm danh ngày 2025-03-03
+ID 237 đã điểm danh ngày 2025-03-03
+ID 238 đã điểm danh ngày 2025-03-03
+ID 239: Lỗi check sự kiện
+ID 240 đã điểm danh ngày 2025-03-03
+ID 241 đã điểm danh ngày 2025-03-03
+ID 242 đã điểm danh ngày 2025-03-03
+ID 243 đã điểm danh ngày 2025-03-03
+ID 244 đã điểm danh ngày 2025-03-03
+ID 245 đã điểm danh ngày 2025-03-03
+ID 246 đã điểm danh ngày 2025-03-03
+ID 247 đã điểm danh ngày 2025-03-03
+ID 248 đã điểm danh ngày 2025-03-03
+ID 249 đã điểm danh ngày 2025-03-03
+ID 250 đã điểm danh ngày 2025-03-03
+ID 251 đã điểm danh ngày 2025-03-03
+ID 252 đã điểm danh ngày 2025-03-03
+ID 253 đã điểm danh ngày 2025-03-03
+ID 254 đã điểm danh ngày 2025-03-03
+ID 255 đã điểm danh ngày 2025-03-03

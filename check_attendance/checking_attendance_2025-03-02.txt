@@ -138,3 +138,82 @@ ID 198 đã điểm danh ngày 2025-03-02
 ID 199 đã điểm danh ngày 2025-03-02
 ID 200 đã điểm danh ngày 2025-03-02
 ID 4 đã điểm danh ngày 2025-03-02
+Tài khoản role2006 đã điểm danh ngày 2025-03-02
+Tài khoản role2012 đã điểm danh ngày 2025-03-02
+Tài khoản role2013 đã điểm danh ngày 2025-03-02
+Tài khoản role2018 đã điểm danh ngày 2025-03-02
+Tài khoản role2024 đã điểm danh ngày 2025-03-02
+Tài khoản role2029 đã điểm danh ngày 2025-03-02
+Tài khoản role2031 đã điểm danh ngày 2025-03-02
+Tài khoản role2037 đã điểm danh ngày 2025-03-02
+Tài khoản role2040 đã điểm danh ngày 2025-03-02
+Tài khoản role2041 đã điểm danh ngày 2025-03-02
+Tài khoản role2042 đã điểm danh ngày 2025-03-02
+Tài khoản role20166: Tài khoản, mật khẩu không chính xác
+Tài khoản role1 đã điểm danh ngày 2025-03-02
+Tài khoản role5 đã điểm danh ngày 2025-03-02
+Tài khoản reg03 đã điểm danh ngày 2025-03-02
+Tài khoản regs3 đã điểm danh ngày 2025-03-02
+Tài khoản reg4: Tài khoản, mật khẩu không chính xác
+Tài khoản reg5: Tài khoản, mật khẩu không chính xác
+Tài khoản reg8: Tài khoản, mật khẩu không chính xác
+Tài khoản reg10 đã điểm danh ngày 2025-03-02
+Tài khoản reg14 đã điểm danh ngày 2025-03-02
+Tài khoản reg31 đã điểm danh ngày 2025-03-02
+Tài khoản reg38 đã điểm danh ngày 2025-03-02
+Tài khoản reg53: Tài khoản, mật khẩu không chính xác
+ID 201 đã điểm danh ngày 2025-03-02
+ID 202 đã điểm danh ngày 2025-03-02
+ID 203 đã điểm danh ngày 2025-03-02
+ID 204 đã điểm danh ngày 2025-03-02
+ID 205 đã điểm danh ngày 2025-03-02
+ID 206 đã điểm danh ngày 2025-03-02
+ID 207 đã điểm danh ngày 2025-03-02
+ID 208 đã điểm danh ngày 2025-03-02
+ID 209 đã điểm danh ngày 2025-03-02
+ID 210: Tài khoản, mật khẩu không chính xác
+ID 211: Tài khoản, mật khẩu không chính xác
+ID 212 đã điểm danh ngày 2025-03-02
+ID 213 đã điểm danh ngày 2025-03-02
+ID 214: Không mở được màn hình login
+ID 215 đã điểm danh ngày 2025-03-02
+ID 216 đã điểm danh ngày 2025-03-02
+ID 217 đã điểm danh ngày 2025-03-02
+ID 218 đã điểm danh ngày 2025-03-02
+ID 219 đã điểm danh ngày 2025-03-02
+ID 220 đã điểm danh ngày 2025-03-02
+ID 221 đã điểm danh ngày 2025-03-02
+ID 222 đã điểm danh ngày 2025-03-02
+ID 223 đã điểm danh ngày 2025-03-02
+ID 224 đã điểm danh ngày 2025-03-02
+ID 225 đã điểm danh ngày 2025-03-02
+ID 226 đã điểm danh ngày 2025-03-02
+ID 227 đã điểm danh ngày 2025-03-02
+ID 228 đã điểm danh ngày 2025-03-02
+ID 229 đã điểm danh ngày 2025-03-02
+ID 230 đã điểm danh ngày 2025-03-02
+ID 231 đã điểm danh ngày 2025-03-02
+ID 232 đã điểm danh ngày 2025-03-02
+ID 233 đã điểm danh ngày 2025-03-02
+ID 234 đã điểm danh ngày 2025-03-02
+ID 235 đã điểm danh ngày 2025-03-02
+ID 236 đã điểm danh ngày 2025-03-02
+ID 237 đã điểm danh ngày 2025-03-02
+ID 238 đã điểm danh ngày 2025-03-02
+ID 239 đã điểm danh ngày 2025-03-02
+ID 240 đã điểm danh ngày 2025-03-02
+ID 241 đã điểm danh ngày 2025-03-02
+ID 242 đã điểm danh ngày 2025-03-02
+ID 243 đã điểm danh ngày 2025-03-02
+ID 244 đã điểm danh ngày 2025-03-02
+ID 245 đã điểm danh ngày 2025-03-02
+ID 246 đã điểm danh ngày 2025-03-02
+ID 247 đã điểm danh ngày 2025-03-02
+ID 248 đã điểm danh ngày 2025-03-02
+ID 249 đã điểm danh ngày 2025-03-02
+ID 250 đã điểm danh ngày 2025-03-02
+ID 251 đã điểm danh ngày 2025-03-02
+ID 252 đã điểm danh ngày 2025-03-02
+ID 253 đã điểm danh ngày 2025-03-02
+ID 254 đã điểm danh ngày 2025-03-02
+ID 255: Lỗi check sự kiện

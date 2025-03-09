@@ -101,6 +101,19 @@ def writeAccount(id):
     pyautogui.press('enter')
 
 
+def writeAccount2(account_obj):
+    # Nhập thông tin đăng nhập từ đối tượng account_obj
+    pyautogui.moveTo(*game.account_field)
+    time.sleep(0.5)
+    pyautogui.click()
+    pyautogui.typewrite(account_obj["acc"])
+    pyautogui.moveTo(*game.password_field)
+    time.sleep(0.5)
+    pyautogui.click()
+    pyautogui.typewrite(account_obj["pass"])
+    pyautogui.press('enter')
+
+
 def selectServerNorth():
     pyautogui.moveTo(*game.server_north)
     time.sleep(0.5)
@@ -255,17 +268,141 @@ def main(id):
         closeTruyKich()
 
 
+def main2(account_obj):
+    try:
+        runGame()
+
+        # Kiểm tra hiện màn hình login và điền tài khoản mật khẩu
+        if not waitForImage(IMAGE_PATHS['login_screen'], timeout=30):
+            logToFile(
+                f"Tài khoản {account_obj['acc']}: Không mở được màn hình login")
+            closeLogin()
+            return
+        writeAccount2(account_obj)
+
+        # Kiểm tra hiện khung chọn server và chọn server Bắc
+        if not waitForImage(IMAGE_PATHS['server_north'], timeout=10):
+            logToFile(
+                f"Tài khoản {account_obj['acc']}: Tài khoản, mật khẩu không chính xác")
+            closeLogin()
+            return
+        selectServerNorth()
+
+        # Kiểm tra vào sảnh, nếu sau 60s không hiện khung map thì chọn lại server và quét tiếp
+        if not waitForImage(IMAGE_PATHS['x_button'], timeout=60):
+            reSelectServerNorth()
+            if not waitForImage(IMAGE_PATHS['x_button'], timeout=60):
+                logToFile(
+                    f"Tài khoản {account_obj['acc']}: Không vào được game")
+                return
+
+        loop_start_time = time.time()
+        b1_done = False
+        b2_done = False
+        b3_done = False
+        b4_done = False
+        b5_done = False
+        b6_done = False
+        b7_done = False
+
+        while not b7_done:
+            if time.time() - loop_start_time > 60:
+                logToFile(f"Tài khoản {account_obj['acc']}: Lỗi check sự kiện")
+                closeTruyKich()
+                return
+
+            if not b1_done:
+                if pyautogui.locateOnScreen(IMAGE_PATHS['review_map'], confidence=0.8):
+                    click(game.x_review_btn)
+                    b1_done = True
+
+            if not b2_done:
+                if pyautogui.locateOnScreen(IMAGE_PATHS['x_button'], confidence=0.8):
+                    click(game.x_event_btn)
+                    b2_done = True
+
+            if not b3_done:
+                if pyautogui.locateOnScreen(IMAGE_PATHS['confirm_button'], confidence=0.8):
+                    click(game.confirm_btn)
+                    b3_done = True
+
+            if not b4_done:
+                if pyautogui.locateOnScreen(IMAGE_PATHS['ok_button'], confidence=0.8):
+                    click(game.ok_btn)
+                    b4_done = True
+
+            if not b5_done:
+                if pyautogui.locateOnScreen(IMAGE_PATHS['event_button'], confidence=0.8):
+                    moveAndScroll(game.event_nav, 300,
+                                  IMAGE_PATHS['rpk_button'])
+                    b5_done = True
+
+            if not b6_done:
+                location = pyautogui.locateOnScreen(
+                    IMAGE_PATHS['rpk_button'], confidence=0.8)
+                if location:
+                    click((location.left + location.width // 2,
+                          location.top + location.height // 2))
+                    b6_done = True
+
+            if b6_done and not b7_done:
+                time.sleep(1)
+                click(game.attendance_btn)
+                click(game.attendance_btn)
+                b7_done = True
+
+            time.sleep(0.5)
+
+        time.sleep(2)
+        closeTruyKich()
+        logToFile(
+            f"Tài khoản {account_obj['acc']} đã điểm danh ngày {current_date}")
+
+    except Exception as e:
+        logToFile(
+            f"Lỗi trong quá trình thực thi tài khoản {account_obj['acc']}: {e}")
+        closeTruyKich()
+
+
+ACCOUNTS = [
+    {"acc": "role2012", "pass": "takitorj"},
+    {"acc": "role2018", "pass": "takitorj"},
+    {"acc": "role2029", "pass": "takitorj"},
+    {"acc": "role2031", "pass": "takitorj"},
+    {"acc": "role2037", "pass": "takitorj"},
+    {"acc": "role2054", "pass": "takitorj"},
+
+    {"acc": "role2061", "pass": "takitorj@a"},
+    {"acc": "role2063", "pass": "takitorj@a"},
+    {"acc": "role2064", "pass": "takitorj@a"},
+    {"acc": "role2076", "pass": "takitorj@a"},
+
+    {"acc": "role20166", "pass": "takitorj@f"},
+
+    {"acc": "reg03", "pass": "takitorj"},
+
+    {"acc": "role1",     "pass": "takitorj1"},
+    {"acc": "role5",     "pass": "takitorj1"},
+    {"acc": "role9",     "pass": "takitorj1"},
+]
+
 # =================================================================
 if __name__ == '__main__':
-    # Danh sách các id cần bỏ qua điểm danh
-    SKIP_IDS = [62, 66, 69, 77, 100, 134, 135]
-    id = 55
-    max_id = 200
+    # Mấy con reg bán rồi
+    SKIP_IDS = [11, 16, 20, 24, 25, 26, 28, 29,
+                31, 34, 35, 42, 47, 50, 52, 134,  135]
+    # Mấy con reg sai mk
+    SKIP_IDS2 = [62, 66, 69, 77, 100, 101]
+    id = 2
+    max_id = 160
     while id <= max_id:
-        if id in SKIP_IDS:
-            logToFile(f"ID {id} bị bỏ qua điểm danh")
+        if id in SKIP_IDS or id in SKIP_IDS2:
+            # logToFile(f"ID {id} bị bỏ qua điểm danh")
             id += 1
             continue
-        time.sleep(5)
+        time.sleep(3)
         main(id)
         id += 1
+    for account in ACCOUNTS:
+        time.sleep(3)
+        main2(account)
