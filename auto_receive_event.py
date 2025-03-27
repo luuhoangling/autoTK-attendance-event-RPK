@@ -16,6 +16,7 @@ IMAGE_PATHS = {
     'event_button': r'C:\Users\Acer\Downloads\Python\tk\images\event_button.png',
     'confirm_button': r'C:\Users\Acer\Downloads\Python\tk\images\confirm_button.png',
     'ok_button': r'C:\Users\Acer\Downloads\Python\tk\images\ok_button.png',
+    'phuc_loi_dang_nhap': r'C:\Users\Acer\Downloads\Python\tk\images\phuc_loi_dangnhap.png',
 }
 
 current_date = datetime.datetime.now().strftime("%Y-%m-%d")
@@ -60,7 +61,7 @@ truyKich = pywinauto.Application()
 
 
 def logToFile(message):
-    with open(f"C:/Users/Acer/Downloads/Python/tk/check_attendance/checking_attendance_{current_date}_2.txt", "a", encoding="utf-8") as f:
+    with open(f"C:/Users/Acer/Downloads/Python/tk/check_attendance/checking_attendance_{current_date}.txt", "a", encoding="utf-8") as f:
         f.write(message + "\n")
 
 # =================================================================
@@ -87,7 +88,20 @@ def runGame():
     truyKich.start("D:\\TK\\TruyKich\\WDlauncher.exe")
 
 
-def writeAccount(account_obj):
+def writeAccount(id):
+    # account = 'regs' + str(id)
+    pyautogui.moveTo(*game.account_field)
+    time.sleep(0.5)
+    pyautogui.click()
+    pyautogui.typewrite(account)
+    pyautogui.moveTo(*game.password_field)
+    time.sleep(0.5)
+    pyautogui.click()
+    pyautogui.typewrite(password)
+    pyautogui.press('enter')
+
+
+def writeAccount2(account_obj):
     # Nhập thông tin đăng nhập từ đối tượng account_obj
     pyautogui.moveTo(*game.account_field)
     time.sleep(0.5)
@@ -147,13 +161,153 @@ def reSelectServerNorth():
     pyautogui.moveTo(*game.server_north)
     time.sleep(0.5)
     pyautogui.click()
-
 # =================================================================
-# Hàm main thực hiện quy trình cho từng tài khoản
+# Hàm main thực hiện quy trình cho từng ID
 # =================================================================
 
 
-def main(account_obj):
+def main(id):
+    try:
+        runGame()
+
+        # Kiểm tra hiện màn hình login và điền tài khoản mật khẩu
+        if not waitForImage(IMAGE_PATHS['login_screen'], timeout=30):
+            logToFile(f"ID {id}: Không mở được màn hình login")
+            closeLogin()
+            return  # Thoát hàm main để chuyển sang ID tiếp theo
+        writeAccount(id)
+
+        # Kiểm tra hiện khung chọn server và chọn server Bắc
+        if not waitForImage(IMAGE_PATHS['server_north'], timeout=10):
+            logToFile(f"ID {id}: Tài khoản, mật khẩu không chính xác")
+            closeLogin()
+            return
+        selectServerNorth()
+
+        # Kiểm tra vào sảnh, nếu sau 60s không hiện khung map cổ thì chọn lại server và quét tiếp
+        if not waitForImage(IMAGE_PATHS['x_button'], timeout=60):
+            reSelectServerNorth()
+            if not waitForImage(IMAGE_PATHS['x_button'], timeout=60):
+                logToFile(f"ID {id}: Không vào được game")
+                return
+
+        loop_start_time = time.time()
+        b1_done = False
+        b2_done = False
+        b3_done = False
+        b4_done = False
+        b5_done = False
+        b6_done = False
+        b7_done = False
+
+        while not b7_done:
+            # Kiểm tra thời gian đã trôi qua trong vòng lặp phụ
+            if time.time() - loop_start_time > 60:
+                logToFile(f"ID {id}: Lỗi check sự kiện")
+                closeTruyKich()
+                return
+
+            # B1: Kiểm tra cửa sổ giới thiệu map (review_map) và click nút "X"
+            if not b1_done:
+                if pyautogui.locateOnScreen(IMAGE_PATHS['review_map'], confidence=0.8):
+                    click(game.x_review_btn)
+                    b1_done = True
+
+            # B2: Kiểm tra nút X và thực hiện click nút X
+            if not b2_done:
+                if pyautogui.locateOnScreen(IMAGE_PATHS['x_button'], confidence=0.8):
+                    click(game.x_event_btn)
+                    b2_done = True
+
+            # B3: Kiểm tra và click nút Xác nhận
+            if not b3_done:
+                if pyautogui.locateOnScreen(IMAGE_PATHS['confirm_button'], confidence=0.8):
+                    click(game.confirm_btn)
+                    b3_done = True
+
+            # B4: Kiểm tra và click nút OK
+            if not b4_done:
+                if pyautogui.locateOnScreen(IMAGE_PATHS['ok_button'], confidence=0.8):
+                    click(game.ok_btn)
+                    b4_done = True
+
+            # B5: Kiểm tra nút đóng khung sự kiện và cuộn trang
+            if not b5_done:
+                if pyautogui.locateOnScreen(IMAGE_PATHS['event_button'], confidence=0.8):
+                    moveAndScroll(game.event_nav, 500,
+                                  IMAGE_PATHS['rpk_button'])
+                    b5_done = True
+
+            # B6: Kiểm tra nút sự kiện rpk và click vào trung tâm nút
+            if not b6_done:
+                location = pyautogui.locateOnScreen(
+                    IMAGE_PATHS['rpk_button'], confidence=0.8)
+                if location:
+                    click((location.left + location.width // 2,
+                           location.top + location.height // 2))
+                    b6_done = True
+
+            time.sleep(3)
+            # B7: Ấn nút tới tiệm đổi
+            if (1 == 1):
+                pyautogui.doubleClick(1314, 577)
+            time.sleep(1)
+
+            # B8: Đổi rpk
+            time.sleep(1)
+            # B7: Ấn nút tới tiệm đổi
+            if (1 == 1):
+                pyautogui.doubleClick(692, 254)
+            time.sleep(1)
+
+            # B10: nút X
+            if (1 == 1):
+                pyautogui.click(1405, 64)
+
+            time.sleep(3)
+            # B10: nút sự kiện
+            if (1 == 1):
+                pyautogui.click(1064, 52)
+
+            time.sleep(1)
+            # B11: Bấm cuộn tìm nút phúc lợi đăng nhâp
+            if (1 == 1):
+                moveAndScroll(game.event_nav, 500,
+                              IMAGE_PATHS['phuc_loi_dang_nhap'])
+
+            time.sleep(1)
+            if (1 == 1):
+                location = pyautogui.locateOnScreen(
+                    IMAGE_PATHS['phuc_loi_dang_nhap'], confidence=0.8)
+                if location:
+                    click((location.left + location.width // 2,
+                           location.top + location.height // 2))
+
+            time.sleep(1)
+            # Bấm để nhận
+            if (1 == 1):
+                coordinates = [(825, 582), (1049, 573), (1311, 586)]
+                for coord in coordinates:
+                    pyautogui.click(coord[0], coord[1])
+                    pyautogui.click(coord[0], coord[1])
+                    time.sleep(1)  # delay 1 giây giữa các tọa độ
+                    b7_done = True
+
+            time.sleep(0.5)  # Giảm tải CPU trong vòng lặp
+
+        # Đóng game
+        time.sleep(2)
+        closeTruyKich()
+
+        # Ghi log
+        logToFile(f"ID {id} đã điểm danh ngày {current_date}")
+
+    except Exception as e:
+        logToFile(f"Lỗi trong quá trình thực thi ID {id}: {e}")
+        closeTruyKich()
+
+
+def main2(account_obj):
     try:
         runGame()
 
@@ -163,7 +317,7 @@ def main(account_obj):
                 f"Tài khoản {account_obj['acc']}: Không mở được màn hình login")
             closeLogin()
             return
-        writeAccount(account_obj)
+        writeAccount2(account_obj)
 
         # Kiểm tra hiện khung chọn server và chọn server Bắc
         if not waitForImage(IMAGE_PATHS['server_north'], timeout=10):
@@ -227,7 +381,9 @@ def main(account_obj):
                     IMAGE_PATHS['rpk_button'], confidence=0.8)
                 if location:
                     click((location.left + location.width // 2,
-                          location.top + location.height // 2))
+                           location.top + location.height // 2))
+                    click((location.left + location.width // 2,
+                           location.top + location.height // 2))
                     b6_done = True
 
             if b6_done and not b7_done:
@@ -249,86 +405,24 @@ def main(account_obj):
         closeTruyKich()
 
 
-# =================================================================
-# Danh sách các tài khoản cần đăng nhập
-# Mỗi phần tử là một đối tượng có 2 key: acc và pass
-# =================================================================
-
-# Chứa các acc bị lỗi chạy lúc 12h
-
-result = [
+ACCOUNTS = [
    
-    {"acc": "regs49", "pass": "takitorj"},
-    {"acc": "regs51", "pass": "takitorj"},
-    {"acc": "regs53", "pass": "takitorj"},
-    {"acc": "regs54", "pass": "takitorj"},
-    {"acc": "regs55", "pass": "takitorj"},
-    {"acc": "regs56", "pass": "takitorj"},
-    {"acc": "regs57", "pass": "takitorj"},
-    {"acc": "regs58", "pass": "takitorj"},
-    {"acc": "regs59", "pass": "takitorj"},
-    {"acc": "regs60", "pass": "takitorj"},
-    {"acc": "regs61", "pass": "takitorj"},
-    {"acc": "regs63", "pass": "takitorj"},
-    {"acc": "regs64", "pass": "takitorj"},
-    {"acc": "regs65", "pass": "takitorj"},
-    {"acc": "regs67", "pass": "takitorj"},
-    {"acc": "regs68", "pass": "takitorj"},
-    {"acc": "regs70", "pass": "takitorj"},
-    {"acc": "regs71", "pass": "takitorj"},
-    {"acc": "regs72", "pass": "takitorj"},
-    {"acc": "regs73", "pass": "takitorj"},
-    {"acc": "regs74", "pass": "takitorj"},
-    {"acc": "regs75", "pass": "takitorj"},
-    {"acc": "regs76", "pass": "takitorj"},
-    {"acc": "regs78", "pass": "takitorj"},
-    {"acc": "regs79", "pass": "takitorj"},
-    {"acc": "regs80", "pass": "takitorj"},
-    {"acc": "regs81", "pass": "takitorj"},
-    {"acc": "regs82", "pass": "takitorj"},
-    {"acc": "regs83", "pass": "takitorj"},
-    {"acc": "regs84", "pass": "takitorj"},
-    {"acc": "regs85", "pass": "takitorj"},
-    {"acc": "regs86", "pass": "takitorj"},
-    {"acc": "regs87", "pass": "takitorj"},
-    {"acc": "regs88", "pass": "takitorj"},
-    {"acc": "regs89", "pass": "takitorj"},
-    {"acc": "regs90", "pass": "takitorj"},
-    {"acc": "regs91", "pass": "takitorj"},
-    {"acc": "regs92", "pass": "takitorj"},
-    {"acc": "regs93", "pass": "takitorj"},
-    {"acc": "regs94", "pass": "takitorj"},
-    {"acc": "regs95", "pass": "takitorj"},
-    {"acc": "regs96", "pass": "takitorj"},
-    {"acc": "regs97", "pass": "takitorj"},
-    {"acc": "regs99", "pass": "takitorj"},
-    {"acc": "regs102", "pass": "takitorj"},
-    {"acc": "regs103", "pass": "takitorj"},
-    {"acc": "regs104", "pass": "takitorj"},
-    {"acc": "regs105", "pass": "takitorj"},
-    {"acc": "regs106", "pass": "takitorj"},
-    {"acc": "regs107", "pass": "takitorj"},
-    {"acc": "regs108", "pass": "takitorj"},
-    {"acc": "regs109", "pass": "takitorj"},
-    {"acc": "regs110", "pass": "takitorj"},
-    {"acc": "regs111", "pass": "takitorj"},
-    {"acc": "regs112", "pass": "takitorj"},
-    {"acc": "regs113", "pass": "takitorj"},
-    {"acc": "regs114", "pass": "takitorj"},
-    {"acc": "regs115", "pass": "takitorj"},
-    {"acc": "regs116", "pass": "takitorj"},
-    {"acc": "regs117", "pass": "takitorj"},
-    {"acc": "regs118", "pass": "takitorj"},
-    {"acc": "regsrole2037", "pass": "takitorj"},
-    {"acc": "regsrole2064", "pass": "takitorj"},
-    {"acc": "regsrole20166", "pass": "takitorj"},
-    {"acc": "regsreg03", "pass": "takitorj"}
 ]
 
 # =================================================================
-# Vòng lặp chạy qua danh sách tài khoản
-# =================================================================
 if __name__ == '__main__':
-    for account in result:
+    # Mấy con reg bán rồi
+    SKIP_IDS = [11, 16, 20, 24, 25, 26, 28, 29,
+                31, 34, 35, 42, 47, 50, 52, 134,  135]
+    # Mấy con reg sai mk
+    SKIP_IDS2 = [62, 66, 69, 77, 100, 101]
+    id = 4
+    max_id = 55
+    while id <= max_id:
+        if id in SKIP_IDS or id in SKIP_IDS2:
+            # logToFile(f"ID {id} bị bỏ qua điểm danh")
+            id += 1
+            continue
         time.sleep(3)
-        main(account)
+        main(id)
+        id += 1

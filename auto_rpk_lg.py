@@ -88,7 +88,7 @@ def runGame():
 
 
 def writeAccount(id):
-    account = 'regs' + str(id)
+    # account = 'regs' + str(id)
     pyautogui.moveTo(*game.account_field)
     time.sleep(0.5)
     pyautogui.click()
@@ -96,7 +96,6 @@ def writeAccount(id):
     pyautogui.moveTo(*game.password_field)
     time.sleep(0.5)
     pyautogui.click()
-    password = 'takitorj'
     pyautogui.typewrite(password)
     pyautogui.press('enter')
 
@@ -234,7 +233,7 @@ def main(id):
             # B5: Kiểm tra nút đóng khung sự kiện và cuộn trang
             if not b5_done:
                 if pyautogui.locateOnScreen(IMAGE_PATHS['event_button'], confidence=0.8):
-                    moveAndScroll(game.event_nav, 300,
+                    moveAndScroll(game.event_nav, 500,
                                   IMAGE_PATHS['rpk_button'])
                     b5_done = True
 
@@ -333,7 +332,7 @@ def main2(account_obj):
 
             if not b5_done:
                 if pyautogui.locateOnScreen(IMAGE_PATHS['event_button'], confidence=0.8):
-                    moveAndScroll(game.event_nav, 300,
+                    moveAndScroll(game.event_nav, 500,
                                   IMAGE_PATHS['rpk_button'])
                     b5_done = True
 
@@ -342,7 +341,9 @@ def main2(account_obj):
                     IMAGE_PATHS['rpk_button'], confidence=0.8)
                 if location:
                     click((location.left + location.width // 2,
-                          location.top + location.height // 2))
+                           location.top + location.height // 2))
+                    click((location.left + location.width // 2,
+                           location.top + location.height // 2))
                     b6_done = True
 
             if b6_done and not b7_done:
@@ -365,25 +366,7 @@ def main2(account_obj):
 
 
 ACCOUNTS = [
-    {"acc": "role2012", "pass": "takitorj"},
-    {"acc": "role2018", "pass": "takitorj"},
-    {"acc": "role2029", "pass": "takitorj"},
-    {"acc": "role2031", "pass": "takitorj"},
-    {"acc": "role2037", "pass": "takitorj"},
-    {"acc": "role2054", "pass": "takitorj"},
-
-    {"acc": "role2061", "pass": "takitorj@a"},
-    {"acc": "role2063", "pass": "takitorj@a"},
-    {"acc": "role2064", "pass": "takitorj@a"},
-    {"acc": "role2076", "pass": "takitorj@a"},
-
-    {"acc": "role20166", "pass": "takitorj@f"},
-
-    {"acc": "reg03", "pass": "takitorj"},
-
-    {"acc": "role1",     "pass": "takitorj1"},
-    {"acc": "role5",     "pass": "takitorj1"},
-    {"acc": "role9",     "pass": "takitorj1"},
+   
 ]
 
 # =================================================================
@@ -393,8 +376,8 @@ if __name__ == '__main__':
                 31, 34, 35, 42, 47, 50, 52, 134,  135]
     # Mấy con reg sai mk
     SKIP_IDS2 = [62, 66, 69, 77, 100, 101]
-    id = 2
-    max_id = 160
+    id = 4
+    max_id = 54
     while id <= max_id:
         if id in SKIP_IDS or id in SKIP_IDS2:
             # logToFile(f"ID {id} bị bỏ qua điểm danh")
